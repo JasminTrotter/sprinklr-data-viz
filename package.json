@@ -1,0 +1,20 @@
+{
+  "name": "sprinklr-data-viz",
+  "version": "1.0.0",
+  "description": "a code sample of typescript with d3 library",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Jasmin Trotter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JasminTrotter/sprinklr-data-viz.git"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "typescript": "^3.6.4"
+  }
+}
