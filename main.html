@@ -8,18 +8,21 @@
   <title>Sprinklr Data Viz Demo</title>
   <meta name="description" content="Sprinklr Data Viz Demo">
   <meta name="author" content="Jasmin Trotter">
+  <meta name="google" content="notranslate">
   <link rel="stylesheet" href="./src/main.css">
+  <link rel="stylesheet" href="./src/prettyprint.css">
 </head>
 
 <body>
   <h1>Data Validation Playground</h1>
-  <figure>
+
+  <figure class="schema-snippet">
     <figcaption>Dancer Schema</figcaption>
     <pre>
-      <code>
+      <code class="prettyprint">
         const nameSchema = {
-          first: { type: 'string' },
-          last: { type: 'string' },
+          firstName: { type: 'string' },
+          lastName: { type: 'string' },
         };
 
         const choreoSchema = {
@@ -53,36 +56,36 @@
   </figure>
 
   <section>
-    <h2>Which data payload passes against the above schema?</h2>
+    <h2>Can you tell which data payload passes against the above schema?</h2>
     <div class="data-option-container">
       <div class="data-option">
         <figure>
-          <figcaption>Option 1</figcaption>
+          <figcaption>Payload 1</figcaption>
           <pre>
-            <code>
+            <code class="prettyprint">
               {
                 name: {
-                  first: 'Jasmin',
-                  last: 'Trotter'
+                  firstName: 'Jasmin',
+                  lastName: 'Trotter'
                 },
                 genre: 'ballet',
                 level: 'advanced',
                 isSoloist: true,
                 choreography: [
-                {
-                  speed: 5,
-                  bodyHalf: 'right',
-                  bodyPart: 'foot'
-                },
-                {
-                  speed: 3,
-                  bodyHalf: 'left',
-                  bodyPart: 'hand'
-                },
-                {
-                  speed: 10,
-                  bodyPart: 'leg'
-                }
+                  {
+                    speed: 5,
+                    bodyHalf: 'right',
+                    bodyPart: 'foot'
+                  },
+                  {
+                    speed: 3,
+                    bodyHalf: 'left',
+                    bodyPart: 'hand'
+                  },
+                  {
+                    speed: 10,
+                    bodyPart: 'leg'
+                  }
                 ]
               }
             </code>
@@ -92,27 +95,27 @@
       </div>
       <div class="data-option">
         <figure>
-          <figcaption>Option 2</figcaption>
+          <figcaption>Payload 2</figcaption>
           <pre>
-            <code>
+            <code class="prettyprint">
                 {
                   name: {
-                    first: 'Joe Shmoe'
+                    firstName: 'Joe Shmoe'
                   },
                   level: 'not actual dancer',
                   isDancer: false,
                   isSoloist: 'no way!',
                   choreography: [
-                  {
-                    speed: 1,
-                    bodyHalf: 'left',
-                    bodyPart: 'foot'
-                  },
-                  {
-                    speed: 1,
-                    bodyHalf: 'left',
-                    bodyPart: 'foot'
-                  }
+                    {
+                      speed: 1,
+                      bodyHalf: 'left',
+                      bodyPart: 'foot'
+                    },
+                    {
+                      speed: 1,
+                      bodyHalf: 'left',
+                      bodyPart: 'foot'
+                    }
                   ]
                 }
             </code>
@@ -126,6 +129,7 @@
     <h2>Results</h2>
   </section>
   <script src="dist/magic-bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 
 </html>
