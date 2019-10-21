@@ -19,4 +19,5 @@ This validation mechanism will alert you of violations to the expected data mode
 - d3 (data visualization library)
 
 ## Testing
+Testing is done with Jest.
 - `npm run test`
