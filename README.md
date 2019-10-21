@@ -4,7 +4,7 @@
 A data producer can send bad data (data object that has missing or incorrectly typed properties) to the data consumer without notice.
 
 ## Solution
-This validation mechanism will alert you of violations to the expected data model. It takes in a data object and a schema to determine if it passes. Violations of the schema are rendered to the UI
+This validation mechanism will alert you of violations to the expected data model. It takes in a data object and a schema to determine if it passes. Violations of the schema are rendered to the DOM.
 
 ## Setup Locally
 ### From the command line, run the following:
@@ -24,4 +24,4 @@ Testing is done with Jest.
 - `npm run test`
 
 ## Contributing
-Pull Requests are welcome! Please run `npm run test` before your commit.
+Pull Requests are welcome! Please make your code changes on a separate branch and run `npm run test` before your commit.
