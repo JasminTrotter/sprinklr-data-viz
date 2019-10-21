@@ -8,7 +8,8 @@ This validation mechanism will alert you of violations to the expected data mode
 
 ## Setup Locally
 ### From the command line, run the following:
-- `git clone https://github.com/JasminTrotter/sprinklr-data-viz.git && cd sprinklr-data-viz`
+- `git clone https://github.com/JasminTrotter/sprinklr-data-viz.git`
+- `cd sprinklr-data-viz`
 - `npm i`
 - `npm run build`
 - Running `open main.html` should open the application in your browser
@@ -21,3 +22,6 @@ This validation mechanism will alert you of violations to the expected data mode
 ## Testing
 Testing is done with Jest.
 - `npm run test`
+
+## Contributing
+Pull Requests are welcome! Please run `npm run test` before your commit.
