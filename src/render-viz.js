@@ -19,6 +19,7 @@ function renderD3(dataset) {
     .enter()
     .append('p')
     .text(function (d) { return d });
+  document.getElementById('results').scrollIntoView();
 };
 
 

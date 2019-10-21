@@ -24,28 +24,28 @@
 
         const choreoSchema = {
           speed: { type: 'number' },
-          bodyHalf: { 
-            type: 'string', 
-            optional: true, 
-            regex: new RegExp(/^left|right$/) 
+          bodyHalf: {
+            type: 'string',
+            optional: true,
+            regex: new RegExp(/^left|right$/)
           },
-          bodyPart: { 
-            type: 'string', 
-            regex: new RegExp(/^head|arm|hand|torso|hip|leg|foot$/) 
+          bodyPart: {
+            type: 'string',
+            regex: new RegExp(/^head|arm|hand|torso|hip|leg|foot$/)
           }
         };
 
         const dancerSchema = {
           name: nameSchema,
           genre: { type: 'string' },
-          level: { 
-            type: 'string', 
-            regex: new RegExp(/^beginner|intermediate|advanced$/) 
+          level: {
+            type: 'string',
+            regex: new RegExp(/^beginner|intermediate|advanced$/)
           },
           isSoloist: { type: 'boolean' },
-          choreography: { 
-            type: 'object', 
-            arrayItem: { itemSchema: choreoSchema } 
+          choreography: {
+            type: 'object',
+            arrayItem: { itemSchema: choreoSchema }
           }
         };
       </code>
@@ -122,7 +122,7 @@
       </div>
     </div>
   </section>
-  <section class="feedback">
+  <section class="feedback" id="results">
     <h2>Results</h2>
   </section>
   <script src="dist/magic-bundle.js"></script>
