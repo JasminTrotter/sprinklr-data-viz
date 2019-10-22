@@ -5,8 +5,8 @@ const choreoSchema = {
 };
 
 const nameSchema = {
-  first: { type: 'string' },
-  last: { type: 'string' },
+  firstName: { type: 'string' },
+  lastName: { type: 'string' },
 };
 
 export const dancerSchema = {
@@ -19,8 +19,8 @@ export const dancerSchema = {
 
 export const goodData = {
   name: {
-    first: 'Jasmin',
-    last: 'Trotter'
+    firstName: 'Jasmin',
+    lastName: 'Trotter'
   },
   genre: 'ballet',
   level: 'advanced',
@@ -45,7 +45,7 @@ export const goodData = {
 
 export const badData = {
   name: {
-    first: 'Joe Shmoe'
+    firstName: 'Joe Shmoe'
   },
   level: 'not actual dancer',
   isDancer: false,
