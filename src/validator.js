@@ -46,6 +46,7 @@ export function validator(eventSchema, eventData) {
     expectedProps.forEach((expectedProp) => {
       const schemaPropValue = schema[expectedProp];
       const dataPropValue = data && data[expectedProp];
+      const isDataPropValueArray = Array.isArray(dataPropValue);
       const propString = `${parentNode ? `${parentNode}.` : ''}${expectedProp}`;
       const isRequired = !schemaPropValue.hasOwnProperty('optional');
 
@@ -53,15 +54,12 @@ export function validator(eventSchema, eventData) {
         violations.push(
           `missing ${expectedProp}${parentNode ? ` from ${parentNode}` : ''}`
         );
-      } else if (isRequired && dataPropValue === '') {
-        violations.push(`${propString} is empty ${typeof dataPropValue}`);
       } else if (schemaPropValue.hasOwnProperty('type')) {
-        if (checkTypeAndRegex(dataPropValue, schemaPropValue, propString)) {
-          violations.push(
-            checkTypeAndRegex(dataPropValue, schemaPropValue, propString)
-          );
+        const check = checkTypeAndRegex(dataPropValue, schemaPropValue, propString);
+        if (check) {
+          violations.push(check);
         }
-        if (Array.isArray(dataPropValue)) {
+        if (isDataPropValueArray) {
           dataPropValue.forEach((prop) => {
             if (schemaPropValue.arrayItem.itemSchema) {
               doValidation(
@@ -70,10 +68,9 @@ export function validator(eventSchema, eventData) {
                 expectedProp
               );
             }
-            if (checkTypeAndRegex(prop, schemaPropValue.arrayItem, propString)) {
-              violations.push(
-                checkTypeAndRegex(prop, schemaPropValue.arrayItem, propString)
-              );
+            const check = checkTypeAndRegex(prop, schemaPropValue.arrayItem, propString);
+            if (check) {
+              violations.push(check);
             }
           });
         }
@@ -89,7 +86,7 @@ export function validator(eventSchema, eventData) {
     if (violations.length) {
       resolve(violations);
     } else {
-      reject(['no schema violations occured']);
+      reject('no schema violations occured');
     }
   }));
 }
