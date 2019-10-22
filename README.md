@@ -19,7 +19,7 @@ Violations of the schema are rendered to the DOM.
 - `cd sprinklr-data-viz`
 - `npm i`
 - `npm run build`
-- Running `open index.html` should open the application in your browser
+- `open index.html` (or open the file manually. please use Chrome browser until further notice)
 
 ## Tech
 
