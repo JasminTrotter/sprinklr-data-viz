@@ -23,6 +23,7 @@ Violations of the schema are rendered to the DOM.
 
 ## Tech
 
+- Javascript
 - npm
 - webpack
 - d3 (data visualization library)
