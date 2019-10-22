@@ -12,7 +12,16 @@ body {
 }
 
 button {
-  flex: 1 0 auto;
+  position: absolute;
+  bottom: 20px;
+  max-height: 35px;
+  padding: 7px;
+  text-align: center;
+  border-radius: 3px;
+  color: #FFFFFF;
+  background-color: green;
+  width: 120px;
+  cursor: pointer;
 }
 
 .data-option, .schema-snippet {
@@ -29,6 +38,7 @@ button {
   border: 0;
   min-width: 350px;
   box-shadow: 2px 4px 25px rgba(0,0,0,.15);
+  position: relative;
 }
 
 .data-option-container {
@@ -45,4 +55,8 @@ figcaption {
   border-radius: 3px;
   color: #FFFFFF;
   padding: 10px;
+}
+
+code {
+  font-size: larger;
 }
