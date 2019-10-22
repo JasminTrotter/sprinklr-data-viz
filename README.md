@@ -27,6 +27,7 @@ Violations of the schema are rendered to the DOM.
 - npm
 - webpack
 - d3 (data visualization library)
+- HTML/CSS
 
 ## Testing
 
