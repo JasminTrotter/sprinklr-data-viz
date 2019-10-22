@@ -18,7 +18,7 @@ function renderD3(dataset) {
     .data(dataset)
     .enter()
     .append('p')
-    .text(function (d) { return d });
+    .text(d => d);
   document.getElementById('results').lastElementChild.scrollIntoView();
 };
 
@@ -29,10 +29,6 @@ function renderViolations(schema, data) {
   }).catch((noViolations) => renderD3(noViolations))
 };
 
-goodDataButton.addEventListener('click', function () {
-  renderViolations(dancerSchema, goodData)
-});
+goodDataButton.addEventListener('click', () => renderViolations(dancerSchema, goodData));
 
-badDataButton.addEventListener('click', function () {
-  renderViolations(dancerSchema, badData)
-});
+badDataButton.addEventListener('click', () => renderViolations(dancerSchema, badData));

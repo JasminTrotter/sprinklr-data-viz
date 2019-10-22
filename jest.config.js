@@ -4,9 +4,9 @@ module.exports = {
     'default'
   ],
   transform: {
-    "^.+\\.js": "<rootDir>/node_modules/babel-jest"
+    '^.+\\.js': '<rootDir>/node_modules/babel-jest'
   },
-  moduleFileExtensions: ["js", "jsx"],
+  moduleFileExtensions: ['js', 'jsx'],
   testEnvironment: 'jsdom',
   testRegex: '(src)/.*\\.test\\.js$',
   testURL: 'http://localhost'
