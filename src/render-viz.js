@@ -26,7 +26,7 @@ function renderD3(dataset) {
 function renderViolations(schema, data) {
   validator(schema, data).then((violations) => {
     renderD3(violations)
-  }).catch((noViolations) => renderD3(noViolations))
+  }).catch((noViolations) => renderD3([noViolations]))
 };
 
 goodDataButton.addEventListener('click', () => renderViolations(dancerSchema, goodData));
