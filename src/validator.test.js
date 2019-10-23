@@ -28,7 +28,7 @@ describe('validator', () => {
       expect(result).toBe(['missing this from that'])
     });
   });
-  test.skip('should return no violations if data passes validation', () => {
+  test('should return no violations if data passes validation', () => {
     expect.assertions(1);
 
     const data = {
