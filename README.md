@@ -15,8 +15,8 @@ Violations of the schema are rendered to the DOM.
 
 ### From the command line, run the following
 
-- `git clone https://github.com/JasminTrotter/sprinklr-data-viz.git`
-- `cd sprinklr-data-viz`
+- `git clone https://github.com/JasminTrotter/validator-data-viz.git`
+- `cd validator-data-viz`
 - `npm i`
 - `npm run build`
 - `open index.html` (or open the file manually. please use Chrome browser until further notice)
